@@ -22,7 +22,7 @@ function renderCarrito() {
         contenido += `<tr>
         <td class="text-center" colspan='2'>Total a Pagar</td>
         <td><b>$${sumaTotalProductos()}</b></td>
-        <td class="text-end"><button id="finalizarcompra" class="btn colorFondo2 btn-sm" onclick="finalizarCompra()" title="Finalizar Compra"><b>Finalizar Compra</b></button></td>
+        <td class="text-end"><button id="btncompra" class="btn colorFondo2 btn-sm" onclick="finalizarCompra()" title="Finalizar Compra"><b>Finalizar Compra</b></button></td>
         </tr>
         </tbody>
         </table>`;
@@ -35,3 +35,27 @@ function renderCarrito() {
 
 renderCarrito();
 renderBotonCarrito();
+
+const obtenerProductos = () => {
+    return new Promise((res) => {
+        setTimeout(() => {
+            res(productos);
+        }, 2000);
+    });
+}
+
+const cargarProductos =() => {
+ 
+    document.getElementById("productos").innerHTML = `<div class="col-md-12 text-center my-5">
+    <div class="d-flex align-items-center">
+    <strong role="status">Loading...</strong>
+    <div class="spinner-border ms-auto" aria-hidden="true"></div>
+  </div>`;
+
+  obtenerProductos().then(data =>{
+    finalizarCompra(data);
+})
+}
+
+document.getElementById("btncompra").onclick = cargarProductos;
+ 
