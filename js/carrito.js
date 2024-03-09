@@ -1,3 +1,4 @@
+
 function renderCarrito() {
     const carrito = obtenerCarritoLS();
     let contenido = "";
@@ -21,12 +22,12 @@ function renderCarrito() {
         contenido += `<tr>
         <td class="text-center" colspan='2'>Total a Pagar</td>
         <td><b>$${sumaTotalProductos()}</b></td>
-        <td class="text-end"><button class="btn colorFondo2 btn-sm" onclick="finalizarCompra()" title="Finalizar Compra"><b>Finalizar Compra</b></button></td>
+        <td class="text-end"><button id="finalizarcompra" class="btn colorFondo2 btn-sm" onclick="finalizarCompra()" title="Finalizar Compra"><b>Finalizar Compra</b></button></td>
         </tr>
         </tbody>
         </table>`;
     } else {
-        contenido = `<h1 class="colorFuente roboto-bold my-5 p-5 text-center">No se encontraron Productos en el Carrito!</h1>`;
+        contenido = `<h1 class="colorFuente raleway-bold my-5 p-5 text-center">No se encontraron Productos en el Carrito!</h1>`;
     }
 
     document.getElementById("productos").innerHTML = contenido;

@@ -7,10 +7,10 @@ function renderProducto() {
     </div>
     <div class='row'>
     <div class="col-md-8 offset-md-2 text-center">
-    <h2 class="colorFuente roboto-bold">${producto.nombre}</h2>
-    <p class="colorFuente roboto-medium">${producto.descripcion}</p>
-    <p class="colorFuente roboto-bold">$${producto.precio}</p>
-    <p><button class="btn colorFondo2" onclick="agregarProductoCarrito()">(+) Agregar</button></p>
+    <h2 class="colorFuente raleway-bold">${producto.nombre}</h2>
+    <p class="colorFuente raleway-medium">${producto.descripcion}</p>
+    <p class="colorFuente raleway-bold">$${producto.precio}</p>
+    <p><button id="btnAgregar" class="btn colorFondo2" onclick="agregarProductoCarrito()">Agregar Producto</button></p>
     </div>
     </div>`;
 
