@@ -1,3 +1,4 @@
+
 const productos = [
     {id:1, nombre:"Duplica tus Gigas", imagen:"https://www.personal.com.ar/content/dam/teco-cms-ecosystem/personal/multioferta/iconos/duplica_gigas.svg", descripcion:"Por solo $1000 más te duplicamos tus gigas", precio:1000, categoria:"Packs de Gigas"},
     {id:2, nombre:"3GB + 1GB para redes ¡Gratis!", imagen:"https://www.personal.com.ar/content/dam/teco-cms-ecosystem/personal/prepago/icono-sonrisa.svg", descripcion:"Disfruta de Instagram, Facebook, Youtube, TikTok, a donde vayas con esta super promo. Comprando 3GB de Internet te regalamos 1GB para redes sociales.", precio:2000, categoria:"Compra de Gigas"},

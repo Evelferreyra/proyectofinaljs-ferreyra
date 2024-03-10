@@ -48,7 +48,7 @@ const cargarProductos =() => {
  
     document.getElementById("productos").innerHTML = `<div class="col-md-12 text-center my-5">
     <div class="d-flex align-items-center">
-    <strong role="status">Loading...</strong>
+    <strong role="status">Ya casi es tuyo...</strong>
     <div class="spinner-border ms-auto" aria-hidden="true"></div>
   </div>`;
 

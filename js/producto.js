@@ -19,3 +19,31 @@ function renderProducto() {
 
 renderProducto();
 renderBotonCarrito();
+
+const obtenerProductos = () => {
+    return new Promise((res) => {
+        setTimeout(() => {
+            res(productos);
+        }, 2000);
+    });
+}
+
+const cargarProductos =() => {
+ 
+    document.getElementById("producto").innerHTML = `<div class="col-md-12 text-center my-5">
+    <div class="d-flex align-items-center">
+    <strong role="status">Agregando al carrito...</strong>
+    <div class="spinner-border ms-auto" aria-hidden="true"></div>
+  </div>`;
+
+  obtenerProductos()
+  .then(data => {
+      agregarProductoCarrito(data);
+  })
+  
+  .finally(data => {
+    renderProducto (data);
+  })
+}
+
+document.getElementById("btnAgregar").onclick = cargarProductos;
